@@ -20,6 +20,7 @@ img {
 
 .breed-select {
   margin-top: 40px;
+  margin-bottom: 40px;
   max-width: 300px;
 }
 .cat-info {
@@ -31,41 +32,52 @@ img {
   font-weight: 600;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .loader {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  position: relative;
-}
-.loader::after,
-.loader::before {
-  content: '';
-  box-sizing: border-box;
-  width: 48px;
-  height: 48px;
+  color: #676363;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
-  border: 2px solid #000;
   position: absolute;
-  left: 0;
-  top: 0;
-  animation: animloader 2s linear infinite;
-}
-.loader::after {
-  animation-delay: 1s;
+  top: 50%;
+  left: 50%;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
 }
 
-@keyframes animloader {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
+@keyframes mulShdSpin {
+  0%,
   100% {
-    transform: scale(1);
-    opacity: 0;
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em,
+      0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em,
+      0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
